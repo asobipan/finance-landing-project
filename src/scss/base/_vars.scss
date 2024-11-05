@@ -1,20 +1,47 @@
 :root {
-	--container-width: 1200px;
-	--container-padding: 15px;
+  --container-width: 1200px;
+  --container-padding: 16px;
 
-	--font-main: 'Poppins', sans-serif;
-	--font-accent: 'Playfair Display', serif;
-
-	--page-bg: #fff;
-	--text-color: #000;
-	--accent: #ac182c;
-
-    --laptop-size: 1199px;
-	--tablet-size: 959px;
-	--mobile-size: 599px;
+  --font-main: "Montserrat", sans-serif;
+  @media screen and (min-width: 600px) {
+    --container-padding: 24px;
+  }
+  @media screen and (min-width: 960px) {
+    --container-padding: 32px;
+  }
 }
 
 .dark {
-    --page-bg: #252526;
-    --text-color: #fff;
+  --page-bg: #303030;
+  --text-color: #fff;
 }
+
+$page-bg: #fff;
+$paper-dark: #424242;
+$paper-light: #ffffff;
+$default-light: #fafafa;
+$primary-main: #4caf50;
+$primary-light: #c8e6c9;
+$primary-dark: #2e7d32;
+$secondary-main: #ffa000;
+$secondary-light: #ffecb3;
+$secondary-dark: #ff6f00;
+$accent-main: #2196f3;
+$accent-light: #bbdefb;
+$accent-dark: #0d47a1;
+
+$breakpoint1280: 1280px;
+$breakpoint960: 960px;
+$breakpoint600: 600px;
+$breakpoint390: 390px;
+
+$text-primary: rgba(0, 0, 0, 0.87);
+$text-secondary: rgba(0, 0, 0, 0.54);
+$text-secondary-dark-mode: rgba(255, 255, 255, 0.7);
+$text-disabled: rgba(0, 0, 0, 0.38);
+$text-field: rgba(0, 0, 0, 0.42);
+$border-button: rgba(0, 0, 0, 0.12);
+
+$font-regular: 400;
+$font-medium: 500;
+$font-semiBold: 600;

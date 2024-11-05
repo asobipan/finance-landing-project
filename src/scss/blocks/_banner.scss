@@ -1,0 +1,227 @@
+.banner {
+  width: 100%;
+  padding: 60px 0;
+  @media screen and (min-width: $breakpoint600) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $breakpoint960) {
+    .container {
+      position: relative;
+      &__layout {
+        display: flex;
+      }
+      .deco {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+      }
+      .deco-slides {
+        display: block;
+        position: absolute;
+        right: -350px;
+        top: 0;
+        z-index: -1;
+      }
+    }
+    #slick-slide01 .container__layout {
+      flex-direction: row-reverse;
+    }
+    #slick-slide01 .container {
+      .deco {
+        right: initial;
+        left: 0;
+      }
+    }
+    #slick-slide02 {
+      .banner__inner {
+        text-align: center;
+      }
+      .banner__btns {
+        justify-content: center;
+      }
+    }
+    .banner__inner {
+      text-align: start;
+    }
+    .banner__btns {
+      justify-content: start;
+    }
+    img {
+      max-width: 500px;
+    }
+  }
+
+  @media screen and (min-width: 0px) {
+    .deco {
+      display: none;
+    }
+    .deco-slides {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1204px) {
+    .container {
+      .deco {
+        display: none;
+      }
+      .deco-slides {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    text-align: center;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: $font-semiBold;
+      line-height: 36px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 24px;
+      font-weight: $font-medium;
+      margin-top: 1rem;
+      color: $text-secondary;
+    }
+    @media screen and (min-width: $breakpoint600) {
+      padding: 0 0 3rem 0;
+      h2 {
+        font-size: 2rem;
+        line-height: 48px;
+      }
+      p {
+        font-size: 1.25rem;
+        line-height: 32px;
+      }
+    }
+  }
+  &__btns {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    button {
+      height: 50px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      background-color: $primary-main;
+      color: $paper-light;
+      font-weight: $font-semiBold;
+      @media screen and (min-width: $breakpoint600) {
+        padding: 0 28px;
+      }
+
+      &:last-child {
+        background-color: transparent;
+        margin-bottom: 30px;
+        color: $primary-main;
+        border: 1px solid $primary-main;
+      }
+    }
+    @media screen and (min-width: $breakpoint600) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  img {
+    max-height: 350px;
+    object-fit: fill;
+    margin: 0 auto;
+  }
+
+  .slick-dots {
+    padding-top: 30px;
+  }
+
+  .slick-dots li button:before {
+    border-radius: 50%;
+    color: transparent !important;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $primary-main;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  .slick-dots li.slick-active button:before {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    top: -5px;
+    left: -5px;
+    background: $primary-main !important;
+  }
+
+  .slick-dots {
+    padding-top: 30px;
+  }
+
+  .slick-dots li button:before {
+    border-radius: 50%;
+    color: transparent !important;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $primary-main;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  .slick-dots li .divider {
+    width: 1px;
+    background-color: $text-secondary;
+  }
+
+  .slick-dots li.slick-active button:before {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    top: -5px;
+    left: -5px;
+    background: $primary-main !important;
+  }
+
+  @media screen and (min-width: $breakpoint960) {
+    .slick-dots {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 var(--container-padding);
+      position: relative;
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+
+    .slick-dots li.slick-active {
+      border: 1px solid $primary-main;
+      border-radius: 29px;
+      a {
+        text-decoration: none;
+        color: $primary-dark;
+        strong {
+          color: $secondary-main;
+        }
+      }
+    }
+    .slick-dots li {
+      max-width: 390px;
+      margin: 0 auto;
+      text-align: start;
+      width: auto;
+      height: auto;
+      font-weight: $font-medium;
+      padding: 16px 25px;
+      a {
+        color: $text-primary;
+      }
+      strong {
+        font-size: 1.75rem;
+        line-height: 43px;
+        font-weight: $font-semiBold;
+      }
+    }
+  }
+}

@@ -1,11 +1,36 @@
 <header class="header">
+  <nav>
     <div class="container">
-        <div class="header__row">
-            <div class="logo">Logo</div>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
+      <div class="logo-menu">
+        <button class="mobile-btn">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="logo">
+          <a href="#">
+            <img src="../../img/icons/logo.svg" alt="Logotype" />
+            <h1>Finance</h1>
+          </a>
         </div>
+      </div>
+
+      <ul>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="#">Feature</a></li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">Merchant</a></li>
+      </ul>
+
+      <div class="user-menu">
+        <button type="button" class="user-menu__contact">contact us</button>
+        <div class="divider"></div>
+        <button type="button" class="user-menu__theme">
+          <img src="../../img/icons/light-mode-icon.svg" alt="Dark Mode icon" />
+        </button>
+      </div>
     </div>
+  </nav>
 </header>
-@@include('mobile-nav.html')
