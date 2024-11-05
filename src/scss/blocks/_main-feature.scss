@@ -1,0 +1,125 @@
+.main-feature {
+  .container {
+    display: flex;
+    padding: 50px 0 0 0;
+    gap: 50px;
+    @media screen and (max-width: 1120px) {
+      gap: 0;
+    }
+    @media screen and (max-width: $breakpoint960) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__counter {
+    position: relative;
+    margin-top: 21px;
+    .counter {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      transform: translate(-50%, -50%);
+      @media screen and (max-width: 1060px) {
+        width: 350px;
+      }
+    }
+    @media screen and (max-width: 1060px) {
+      img {
+        width: 450px;
+      }
+      .counter {
+        width: 350px;
+      }
+    }
+    @media screen and (max-width: $breakpoint960) {
+      img {
+        width: 100%;
+      }
+      .counter {
+        width: auto;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint600) {
+      img {
+        width: 450px;
+      }
+      .counter {
+        width: 350px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      img {
+        width: 350px;
+      }
+      .counter {
+        width: 250px;
+      }
+    }
+    @media screen and (max-width: $breakpoint960) {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: $text-primary;
+    padding: 0 30px;
+    @media screen and (max-width: $breakpoint600) {
+      padding: 0 15px;
+    }
+
+    @include title-styles;
+
+    @media screen and (max-width: $breakpoint960) {
+      text-align: center;
+      svg {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__video {
+    max-width: 100%;
+    position: relative;
+    margin-top: 40px;
+    .video__container {
+      position: relative;
+      max-width: 591px;
+      @media screen and (max-width: $breakpoint960) {
+        margin: 0 auto;
+      }
+    }
+    img {
+      max-width: 100%;
+      border: 5px solid $primary-main;
+      border-radius: 30px;
+      padding: 0 20px;
+    }
+    .video__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+    }
+    .video__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $paper-light;
+      max-width: 91px;
+      max-height: 91px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}

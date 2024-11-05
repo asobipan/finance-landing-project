@@ -1,0 +1,31 @@
+@mixin title-styles {
+  h3 {
+    font-size: 1.75rem;
+    line-height: 44px;
+    font-weight: $font-semiBold;
+    margin-top: 10px;
+    @media screen and (min-width: $breakpoint600) {
+      font-size: 1.625rem;
+      line-height: 48px;
+    }
+    @media screen and (min-width: $breakpoint1280) {
+      font-size: 2.25rem;
+      line-height: 48px;
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: $font-regular;
+    margin-top: 20px;
+    @media screen and (min-width: $breakpoint600) {
+      font-size: 1.25rem;
+      line-height: 32px;
+    }
+
+    @media screen and (min-width: $breakpoint1280) {
+      font-size: 1.375rem;
+      line-height: 32px;
+    }
+  }
+}
