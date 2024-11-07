@@ -142,18 +142,16 @@
   .slick-dots li button:before {
     border-radius: 50%;
     color: transparent !important;
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
     border: 2px solid $primary-main;
-    opacity: 0.5;
+    opacity: 1;
     transition: all 0.3s ease;
   }
   .slick-dots li.slick-active button:before {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     opacity: 1;
-    top: -5px;
-    left: -5px;
     background: $primary-main !important;
   }
 

@@ -1,0 +1,39 @@
+.testimonials {
+  padding-top: 120px;
+  @media screen and (max-width: 770px) {
+    padding-top: 100px;
+  }
+  &__info {
+    @include title-styles;
+    text-align: center;
+  }
+  .reviews {
+    padding-top: 40px;
+    &__card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 100px 8px 8px 10px;
+      max-width: 594px;
+      width: 100%;
+      .deco {
+        width: 450px;
+        height: 450px;
+        background-color: $primary-main;
+        border-radius: 50%;
+        position: absolute;
+        top: -60px;
+        left: -5;
+        z-index: -3;
+      }
+      img {
+        height: 321px;
+        width: 326px;
+        object-fit: fill;
+        border-radius: 0px 30px 30px 0px;
+        z-index: -4;
+      }
+    }
+    &__review {
+    }
+  }
+}
