@@ -1,0 +1,221 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $text-secondary;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 333;
+  &-content {
+    background: $page-bg;
+    max-width: 800px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    @media screen and (max-width: $breakpoint600) {
+      width: 95%;
+    }
+    h2 {
+      color: $primary-dark;
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 48px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 60px;
+      @media screen and (max-width: $breakpoint600) {
+        margin-top: 40px;
+      }
+      .row {
+        display: flex;
+        gap: 20px;
+        @media screen and (max-width: 500px) {
+          flex-direction: column;
+        }
+        .col {
+          width: 50%;
+          position: relative;
+          @media screen and (max-width: 500px) {
+            width: 100%;
+          }
+          input {
+            background: rgba(0, 0, 0, 0.09);
+            padding: 10px 0 14px 12px;
+            color: $text-field;
+            font-size: 16px;
+            width: 100%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+            transition: all 0.2s ease-in-out;
+            &:focus {
+              background-color: rgba(0, 0, 0, 0.03);
+              border-bottom: 1px solid $secondary-dark;
+            }
+          }
+          label {
+            position: absolute;
+            left: 0;
+            top: -16px;
+            color: $secondary-dark;
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+      .textarea {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        textarea {
+          background: rgba(0, 0, 0, 0.09);
+          padding: 16px 21px;
+          color: $text-field;
+          font-size: 16px;
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+          transition: all 0.2s ease-in-out;
+          resize: none;
+
+          &:focus {
+            background-color: rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid $secondary-dark;
+            outline: none;
+          }
+        }
+        label {
+          position: absolute;
+          left: 0;
+          top: -17px;
+          color: $secondary-dark;
+          font-size: 13px;
+          font-weight: 500;
+        }
+      }
+      .accept {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $breakpoint600) {
+          gap: 10px;
+        }
+        .row {
+          gap: 10px;
+          align-items: center;
+          @media screen and (max-width: 500px) {
+            flex-direction: row;
+          }
+          label {
+            max-width: 317px;
+            width: 100%;
+
+            span {
+              color: $primary-main;
+              font-size: 16px;
+            }
+            @media screen and (max-width: $breakpoint600) {
+              font-size: 13px;
+              span {
+                font-size: 13px;
+              }
+            }
+          }
+          input {
+            appearance: none;
+            font: inherit;
+            color: $secondary-main;
+            width: 1.15em;
+            height: 1.15em;
+            border-radius: 0.15em;
+            transform: translateY(-0.075em);
+          }
+          input[type="checkbox"] {
+            display: grid;
+            place-content: center;
+            background-color: $secondary-main;
+          }
+
+          input[type="checkbox"]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em $page-bg;
+            transform-origin: bottom left;
+            clip-path: polygon(
+              14% 44%,
+              0 65%,
+              50% 100%,
+              100% 16%,
+              80% 0%,
+              43% 62%
+            );
+          }
+
+          input[type="checkbox"]:checked::before {
+            transform: scale(1);
+          }
+        }
+        button {
+          background-color: $primary-main;
+          border-radius: 6px;
+          font-size: 1rem;
+          color: $page-bg;
+          padding: 11px 32px;
+          max-width: 206px;
+          height: 40px;
+          width: 100%;
+          font-weight: $font-semiBold;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media screen and (max-width: 500px) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+    .close-modal {
+      background: transparent;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 25px;
+      right: 27px;
+    }
+    .close-modal:after {
+      content: "";
+      height: 25px;
+      border-left: 1px solid $text-primary;
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 12px;
+      top: 0;
+    }
+
+    .close-modal:before {
+      content: "";
+      height: 25px;
+      border-left: 1px solid $text-primary;
+      position: absolute;
+      transform: rotate(45deg);
+      left: 12px;
+      top: 0;
+    }
+  }
+}
+.open-modal {
+  opacity: 1;
+  position: fixed;
+  visibility: visible;
+}

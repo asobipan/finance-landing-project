@@ -1,0 +1,47 @@
+<div class="modal">
+  <div class="modal-content">
+    <h2>Contact us</h2>
+    <form method="post">
+      <div class="row">
+        <div class="col">
+          <label for="firstName">What is your first name? *</label>
+          <input type="text" name="First Name" id="firstName" required />
+        </div>
+        <div class="col">
+          <label for="lastName">What is your last name? *</label>
+          <input type="text" name="Last Name" id="lastName" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="phoneNumber">What is your phone number? *</label>
+          <input type="text" name="Phone Number" id="phoneNumber" required />
+        </div>
+        <div class="col">
+          <label for="emailAddress">What is your email address? *</label>
+          <input type="email" name="Email Address" id="emailAddress" required />
+        </div>
+      </div>
+      <div class="col textarea">
+        <label for="moreInfo">Write your message here</label>
+        <textarea
+          type="email"
+          name="More Info"
+          rows="6"
+          id="moreInfo"
+        ></textarea>
+      </div>
+      <div class="col accept">
+        <div class="row">
+          <input type="checkbox" name="terms" id="terms" required />
+          <label for="terms"
+            >I have read and accept the Terms of
+            <span> Service & Privacy Policy *</span></label
+          >
+        </div>
+        <button type="submit" class="submit-btn">Send message</button>
+      </div>
+    </form>
+    <button class="close-modal"></button>
+  </div>
+</div>

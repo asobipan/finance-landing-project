@@ -1,6 +1,6 @@
 .partners {
   .container {
-    max-width: 938px;
+    max-width: 968px;
   }
   @include title-styles;
   .deco-title {
@@ -62,7 +62,7 @@
     display: none;
     padding-top: 35px;
     grid-template-columns: repeat(auto-fill, 145px);
-    place-content: center;
+    place-content: space-between;
     li {
       display: flex;
       justify-content: center;
