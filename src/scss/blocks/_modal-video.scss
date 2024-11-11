@@ -11,7 +11,7 @@
   z-index: 333;
   &__content {
     border-radius: 15px;
-    background: $page-bg;
+    background: var(--paper-theme);
     max-width: 800px;
     width: 100%;
     position: absolute;
@@ -44,7 +44,7 @@
         &:after {
           content: "";
           height: 20px;
-          border-left: 2px solid $text-secondary;
+          border-left: 2px solid var(--text-primary);
           position: absolute;
           transform: rotate(-45deg);
           left: 17px;
@@ -54,7 +54,7 @@
         &:before {
           content: "";
           height: 20px;
-          border-left: 2px solid $text-secondary;
+          border-left: 2px solid var(--text-primary);
           position: absolute;
           transform: rotate(45deg);
           left: 17px;

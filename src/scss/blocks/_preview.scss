@@ -76,7 +76,7 @@
     width: 17px;
     height: 17px;
     opacity: 1;
-    background: $primary-main !important;
+    background: var(--primary-main) !important;
   }
 
   .slick-dots li button:before {
@@ -84,7 +84,7 @@
     color: transparent !important;
     width: 17px;
     height: 17px;
-    border: 2px solid $primary-main;
+    border: 2px solid var(--primary-main);
     opacity: 1;
     transition: all 0.3s ease;
   }

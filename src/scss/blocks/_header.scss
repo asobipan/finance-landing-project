@@ -36,7 +36,7 @@
 
       span {
         width: 20px;
-        background-color: $text-primary;
+        background-color: var(--text-primary);
         height: 1px;
         &:nth-child(2) {
           width: 15px;
@@ -57,8 +57,8 @@
       }
       h1 {
         font-size: 1.125rem;
-        color: $text-primary;
-        font-weight: $font-semiBold;
+        color: var(--text-primary);
+        font-weight: var(--font-semiBold);
         font-size: 1.25rem;
         @media screen and (min-width: $breakpoint960) {
           font-size: 1.75rem;
@@ -87,10 +87,9 @@
           }
         }
         li:hover {
-          border: 1px solid $primary-main;
-
+          border: 1px solid var(--primary-main);
           a {
-            color: $primary-main;
+            color: var(--primary-main);
             opacity: 1;
           }
         }
@@ -99,12 +98,12 @@
           max-width: 160px;
           padding: 5px 10px;
           opacity: 0.7542;
-          color: $text-primary;
-          font-weight: $font-semiBold;
+          color: var(--text-primary);
+          font-weight: var(--font-semiBold);
           font-size: 1rem;
         }
       }
-      @media screen and (max-width: $breakpoint960) {
+      @media screen and (max-width: 960px) {
         display: none;
       }
     }
@@ -122,13 +121,13 @@
       }
 
       &__contact {
-        background-color: $secondary-main;
+        background-color: var(--secondary-main);
         border-radius: 6px;
         padding: 6px 10px;
         font-size: 12px;
-        color: $paper-light;
+        color: #fff;
         text-transform: uppercase;
-        font-weight: $font-semiBold;
+        font-weight: var(--font-semiBold);
         @media screen and (min-width: $breakpoint600) {
           padding: 9px 12px;
           font-size: 14px;
@@ -155,7 +154,7 @@
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: $page-bg;
+    background-color: var(--paper-theme);
     z-index: 111;
     padding-top: 12px;
     transition: all ease-in-out 0.3s;
@@ -177,7 +176,7 @@
     .mobile-btn:after {
       content: "";
       height: 25px;
-      border-left: 1px solid $text-primary;
+      border-left: 1px solid var(--text-primary);
       position: absolute;
       transform: rotate(-45deg);
       left: 16px;
@@ -187,7 +186,7 @@
     .mobile-btn:before {
       content: "";
       height: 25px;
-      border-left: 1px solid $text-primary;
+      border-left: 1px solid var(--text-primary);
       position: absolute;
       transform: rotate(45deg);
       left: 16px;
@@ -201,7 +200,7 @@
       li {
         padding: 16px;
         a {
-          color: $text-primary;
+          color: var(--text-primary);
         }
         @media screen and (min-width: $breakpoint600) {
           padding: 16px 16px 16px 0;

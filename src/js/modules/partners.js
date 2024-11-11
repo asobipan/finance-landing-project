@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tabBtns = document.querySelectorAll(".tabs__btn");
   const tabList = document.querySelectorAll(".partners__icons");
-  console.log(tabBtns);
 
   function handleTabClick(e) {
     tabBtns.forEach((btn) => {

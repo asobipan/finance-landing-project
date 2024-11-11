@@ -1,9 +1,66 @@
+:root {
+  --container-width: 1200px;
+  --container-padding: 16px;
+  --font-main: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 600px) {
+    --container-padding: 24px;
+  }
+  @media screen and (min-width: 960px) {
+    --container-padding: 32px;
+  }
+
+  --paper-theme: #{$paper-light};
+  --default-theme: #{$default-light};
+  --primary-main: #{$primary-main};
+  --primary-theme: #{$primary-dark};
+  --secondary-main: #{$secondary-main};
+  --secondary-theme: #{$secondary-light};
+  --accent-main: #{$accent-main};
+  --accent-theme: #{$accent-light};
+  --deco-theme: #{$primary-light};
+  --hr-theme: rgba(0, 0, 0, 0.12);
+
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-disabled: #{$text-disabled};
+  --text-field: #{$text-field};
+  --border-button: #{$border-button};
+
+  --font-regular: #{$font-regular};
+  --font-medium: #{$font-medium};
+  --font-semiBold: #{$font-semiBold};
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--page-bg);
-  color: var(--text-color);
+  background-color: var(--paper-theme);
+  color: var(--text-primary);
   font-family: var(--font-main);
+  transition: all ease-in-out 0.3s;
+}
+
+body.dark {
+  --page-bg: #{$default-dark};
+  --text-color: #{$paper-light};
+
+  --paper-theme: #{$paper-dark};
+  --default-theme: #{$default-dark};
+  --primary-main: #{$primary-main};
+  --primary-theme: #{$primary-light};
+  --secondary-main: #{$secondary-main};
+  --secondary-theme: #{$secondary-dark};
+  --accent-main: #{$accent-main};
+  --accent-theme: #{$accent-dark};
+  --deco-theme: #{$primary-dark};
+  --hr-theme: rgba(255, 255, 255, 0.12);
+
+  --text-primary: #{$paper-light};
+  --text-secondary: #{$text-secondary-dark-mode};
+  --text-disabled: #{$text-disabled};
+  --text-field: #{$text-field};
+  --border-button: #{$border-button};
 }

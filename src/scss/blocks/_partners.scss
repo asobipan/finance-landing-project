@@ -13,7 +13,7 @@
     padding-top: 40px;
     max-width: 700px;
     width: 100%;
-    border-bottom: 2px solid $border-button;
+    border-bottom: 2px solid var(--hr-theme);
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -30,9 +30,10 @@
       height: 45px;
       vertical-align: top;
       font-size: 1.125rem;
-      font-weight: $font-semiBold;
-      color: $text-secondary;
+      font-weight: var(--font-semiBold);
+      color: var(--text-secondary);
       text-transform: uppercase;
+      transition: color ease-in 0.2s;
       &::after {
         content: "";
         position: absolute;
@@ -43,6 +44,7 @@
         height: 5px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        transition: background-color ease-in 0.2s;
       }
       @media screen and (max-width: 450px) {
         padding: 0 10px 18px 10px;
@@ -52,9 +54,9 @@
       }
     }
     .btn__active {
-      color: $secondary-main;
+      color: var(--secondary-main);
       &::after {
-        background-color: $secondary-light;
+        background-color: var(--secondary-theme);
       }
     }
   }

@@ -1,8 +1,6 @@
 $(".reviews").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
-  // autoplay: true,
-  // autoplaySpeed: 4000,
   arrows: true,
   prevArrow: `<button type="button" class='pull-left'><svg xmlns="http://www.w3.org/2000/svg" width="71" height="69" viewBox="0 0 71 69" fill="none">
 <path d="M0.5 30C0.5 13.4315 13.9315 0 30.5 0H65.5C68.2614 0 70.5 2.23858 70.5 5V39C70.5 55.5685 57.0685 69 40.5 69H5.5C2.73858 69 0.5 66.7614 0.5 64V30Z" fill="#2E7D32"/>
@@ -14,7 +12,6 @@ $(".reviews").slick({
 </svg></button>`,
   dots: false,
   rows: 0,
-  // variableWidth: true,
   responsive: [
     {
       breakpoint: 1100,

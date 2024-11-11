@@ -1,28 +1,7 @@
-:root {
-  --container-width: 1200px;
-  --container-padding: 16px;
-
-  --font-main: "Montserrat", sans-serif;
-  @media screen and (min-width: 600px) {
-    --container-padding: 24px;
-  }
-  @media screen and (min-width: 960px) {
-    --container-padding: 32px;
-  }
-}
-
-.dark {
-  --page-bg: #303030;
-  --text-color: #fff;
-  a {
-    color: #fff;
-  }
-}
-
-$page-bg: #fff;
-$paper-dark: #424242;
+$paper-dark: #303030;
 $paper-light: #ffffff;
 $default-light: #fafafa;
+$default-dark: #424242;
 $primary-main: #4caf50;
 $primary-light: #c8e6c9;
 $primary-dark: #2e7d32;

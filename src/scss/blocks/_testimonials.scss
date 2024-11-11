@@ -33,12 +33,12 @@
       height: 326px;
       margin: 32px 8px 0 8px;
       @media screen and (max-width: $breakpoint600) {
-        background-color: $primary-main;
+        background-color: var(--primary-main);
       }
       .deco {
         width: 450px;
         height: 450px;
-        background-color: $primary-main;
+        background-color: var(--primary-main);
         border-radius: 50%;
         position: absolute;
         top: -73px;
@@ -54,7 +54,7 @@
           position: absolute;
           width: 30px;
           height: 30px;
-          background-color: $accent-main;
+          background-color: var(--accent-main);
           border-radius: 50%;
         }
         &::before {
@@ -64,7 +64,7 @@
           position: absolute;
           width: 87px;
           height: 87px;
-          background-color: $secondary-main;
+          background-color: var(--secondary-main);
           border-radius: 50%;
         }
       }
@@ -90,7 +90,7 @@
       h4,
       blockquote,
       p {
-        color: $paper-light;
+        color: #fff;
       }
       blockquote {
         overflow: hidden;
@@ -131,12 +131,12 @@
       h4 {
         font-size: 1rem;
         margin-top: 26px;
-        font-weight: $font-semiBold;
+        font-weight: var(--font-semiBold);
       }
       & > p {
         font-size: 0.825rem;
         margin-top: 7px;
-        font-weight: $font-regular;
+        font-weight: var(--font-regular);
         letter-spacing: 0.03em;
       }
       @media screen and (max-width: $breakpoint600) {

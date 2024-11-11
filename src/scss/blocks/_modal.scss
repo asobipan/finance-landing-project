@@ -11,7 +11,7 @@
   z-index: 333;
   &-content {
     border-radius: 45px;
-    background: $page-bg;
+    background: var(--default-theme);
     max-width: 800px;
     width: 100%;
     position: absolute;
@@ -150,7 +150,7 @@
             height: 0.65em;
             transform: scale(0);
             transition: 120ms transform ease-in-out;
-            box-shadow: inset 1em 1em $page-bg;
+            box-shadow: inset 1em 1em var(--paper-theme);
             transform-origin: bottom left;
             clip-path: polygon(
               14% 44%,
@@ -170,7 +170,7 @@
           background-color: $primary-main;
           border-radius: 6px;
           font-size: 1rem;
-          color: $page-bg;
+          color: #fff;
           padding: 11px 32px;
           max-width: 206px;
           height: 40px;
@@ -197,7 +197,7 @@
     .close-modal:after {
       content: "";
       height: 25px;
-      border-left: 1px solid $text-primary;
+      border-left: 1px solid var(--text-primary);
       position: absolute;
       transform: rotate(-45deg);
       left: 12px;
@@ -207,7 +207,7 @@
     .close-modal:before {
       content: "";
       height: 25px;
-      border-left: 1px solid $text-primary;
+      border-left: 1px solid var(--text-primary);
       position: absolute;
       transform: rotate(45deg);
       left: 12px;
@@ -219,4 +219,9 @@
   opacity: 1;
   position: fixed;
   visibility: visible;
+}
+
+.dark .modal-content form .textarea textarea,
+.dark .modal-content form .row .col input {
+  color: #fff;
 }

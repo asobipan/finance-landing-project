@@ -33,7 +33,7 @@
     height: 240px;
     position: relative;
     z-index: 3;
-    background-color: $page-bg;
+    background-color: var(--default-theme);
     border-radius: 21px;
     display: flex;
     padding: 47px 66px 0 57px;
@@ -57,7 +57,7 @@
     }
     .actions {
       h3 {
-        color: $primary-dark;
+        color: var(--primary-theme);
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 32px;
