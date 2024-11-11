@@ -10,6 +10,7 @@
   visibility: hidden;
   z-index: 333;
   &-content {
+    border-radius: 45px;
     background: $page-bg;
     max-width: 800px;
     width: 100%;
@@ -18,7 +19,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-    @media screen and (max-width: $breakpoint600) {
+    @media screen and (max-width: $breakpoint960) {
       width: 95%;
     }
     h2 {
