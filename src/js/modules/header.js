@@ -34,6 +34,7 @@ const changeTheme = (e) => {
     setIcons();
     document.body.classList.toggle("dark");
   } else if (e.target.type === "button") {
+    setIcons();
     document.body.classList.toggle("dark");
   }
 };

@@ -114,15 +114,21 @@
       background-color: var(--primary-main);
       color: #fff;
       font-weight: var(--font-semiBold);
+      transition: 0.3s ease-in all;
+      &:hover {
+        background-color: rgba($color: $primary-main, $alpha: 0.8);
+      }
       @media screen and (min-width: $breakpoint600) {
         padding: 0 28px;
       }
-
       &:last-child {
         background-color: transparent;
         margin-bottom: 30px;
         color: var(--primary-main);
         border: 1px solid var(--primary-main);
+        &:hover {
+          background-color: rgba($color: $primary-main, $alpha: 0.1);
+        }
       }
     }
     @media screen and (min-width: $breakpoint600) {
@@ -170,6 +176,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
       padding: 0 var(--container-padding);
       position: relative;
       margin: 0 auto;
@@ -179,6 +186,9 @@
     .slick-dots li.slick-active {
       border: 1px solid var(--primary-main);
       border-radius: 29px;
+      &:hover {
+        border: 1px solid var(--primary-main);
+      }
       a {
         text-decoration: none;
         color: var(--primary-dark);
@@ -195,6 +205,13 @@
       height: auto;
       font-weight: var(--font-medium);
       padding: 16px 25px;
+      border: 1px solid transparent;
+      border-radius: 29px;
+      transition: 0.2s ease-in-out all;
+      &:hover {
+        background-color: rgba($color: $text-primary, $alpha: 0.05);
+        border-color: $secondary-main;
+      }
       a {
         color: var(--text-primary);
       }
@@ -210,4 +227,13 @@
 .dark .banner__btns button:last-child {
   color: $secondary-dark;
   border: 1px solid $secondary-main;
+  &:hover {
+    background-color: rgba($color: $secondary-dark, $alpha: 0.1);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .dark .banner .slick-dots li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
