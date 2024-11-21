@@ -1,26 +1,12 @@
 const closeModalBtn = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const submitBtn = document.querySelector(".submit-btn");
-const footerModalBtn = document.querySelector(
-  ".footer__column .user-menu__contact"
-);
+const footerModalBtn = document.querySelector(".footer__menu__layout button");
 const openModalBtn = document.querySelector(".user-menu__contact");
 
-const openModal = (e) => {
-  modal.classList.add("open-modal");
-  document.body.style.overflow = "hidden";
-};
-
-const closeModal = () => {
-  modal.classList.remove("open-modal");
-  document.body.style.overflow = "initial";
-};
-
-closeModalBtn.addEventListener("click", closeModal);
-
-footerModalBtn.addEventListener("click", openModal);
-
 openModalBtn.addEventListener("click", openModal);
+footerModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -58,3 +44,13 @@ submitBtn.addEventListener("click", (e) => {
     });
   }
 });
+
+function openModal() {
+  modal.classList.add("open-modal");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modal.classList.remove("open-modal");
+  document.body.style.overflow = "initial";
+}
