@@ -24,14 +24,26 @@ submitBtn.addEventListener("click", (e) => {
   }. Please contact me.`;
 
   if (
-    firstName.value === "" ||
-    lastName.value === "" ||
-    phoneNumber.value === "" ||
-    emailAddress.value === "" ||
+    firstName.value.trim() === "" ||
+    lastName.value.trim() === "" ||
+    phoneNumber.value.trim() === "" ||
+    emailAddress.value.trim() === "" ||
     checkbox.checked !== true
   ) {
     alert("Invalid input values. Please re-check.");
   } else {
+    const phoneRegex = /^\+?[0-9]{10,15}$/;
+    if (!phoneRegex.test(phoneNumber.value.trim())) {
+      alert("Invalid phone number. Please enter a valid phone number.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailAddress.value.trim())) {
+      alert("Invalid email address. Please enter a valid email.");
+      return;
+    }
+
     Email.send({
       SecureToken: "abef4fe1-68c0-44b2-90ce-a64cf26e3db4",
       To: "sobipanarsen2@gmail.com",
@@ -40,7 +52,7 @@ submitBtn.addEventListener("click", (e) => {
       Body: body,
     }).then(() => {
       alert("Successfully! Please wait to our contact!");
-      modal.classList.remove("open-modal");
+      closeModal();
     });
   }
 });
